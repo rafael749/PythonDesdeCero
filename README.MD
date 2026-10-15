@@ -1,5 +1,26 @@
 # Parcial 01
 
+## Inicio rápido al clonar o descargar
+
+Abrí la carpeta del proyecto en **VS Code**, seleccioná **Agente** en Copilot
+Chat y escribí:
+
+> ejecutar proyecto localmente
+
+También podés usar **/ejecutar-proyecto-localmente**. El repositorio incluye
+instrucciones para comprobar el sistema operativo, la versión de Python y los
+requisitos, ejecutar las pruebas e iniciar el laboratorio. Si falta Python,
+el asistente debe pedir autorización antes de instalarlo. Requiere Copilot
+habilitado, instrucciones del repositorio activas y permiso para ejecutar herramientas;
+no es una instalación automática al descargar el proyecto.
+
+**No se necesitan paquetes de pip ni Node.js.** Para una instalación nueva se
+recomienda Python 3.11 o posterior compatible con tu sistema y un navegador
+moderno. La primera ejecución de las prácticas necesita Internet para Pyodide.
+
+Consultá [la guía de inicio local](docs/INICIO_LOCAL.md) para Windows, macOS y
+Linux, instalación de Python, comandos manuales y solución de problemas.
+
 ## Laboratorio visual de Python
 
 En macOS, hacé doble clic en **Abrir laboratorio.command** desde Finder.
