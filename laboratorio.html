@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python, paso a paso | Parcial 01</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/laboratorio.css">
+  <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script defer src="/laboratorio.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><img src="/favicon.ico" alt="" width="30" height="32">Python<span> / paso a paso</span></a>
+    <span class="connection" id="connection"><span class="dot"></span>Conectando con Python</span>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="course-label">TU LABORATORIO</div>
+      <div class="course-title">Parcial 01</div>
+      <a href="/aprender" class="nav-item" style="text-decoration:none;margin-bottom:14px"><i data-lucide="book-open"></i>Aprender desde cero</a>
+      <nav aria-label="Ejercicios" id="exercise-nav">
+        <button data-exercise="1" class="nav-item active" aria-current="page"><span class="nav-number">01</span><span>Buscar y reemplazar<small>Strings &middot; listas &middot; for</small></span><i data-lucide="chevron-right"></i></button>
+        <button data-exercise="2" class="nav-item"><span class="nav-number">02</span><span>Validar un email<small>Condiciones &middot; booleanos</small></span><i data-lucide="chevron-right"></i></button>
+        <button data-exercise="3" class="nav-item"><span class="nav-number">03</span><span>Analizar n&uacute;meros<small>Bucles &middot; comparaciones</small></span><i data-lucide="chevron-right"></i></button>
+        <button data-exercise="4" class="nav-item"><span class="nav-number">04</span><span>Adivinar la palabra<small>While &middot; m&oacute;dulos &middot; input</small></span><i data-lucide="chevron-right"></i></button>
+      </nav>
+      <div class="sidebar-footer"><i data-lucide="file-code-2"></i><span>4 ejercicios<br><strong>Tu c&oacute;digo original</strong></span></div>
+    </aside>
+    <main>
+      <div class="heading-row"><div><div class="eyebrow" id="exercise-label">EJERCICIO 01 / 04</div><h1 id="exercise-title">Buscar y reemplazar</h1></div><span class="language-badge">.py</span></div>
+      <p class="intro" id="exercise-description">Una lista entra. Una nueva lista sale. La original queda intacta.</p>
+      <section class="experiment" aria-label="Datos y resultado">
+        <div class="input-section">
+          <h2><span class="section-number">01</span> Datos de entrada <span class="micro-label">INPUT</span></h2>
+          <form id="exercise-form" novalidate>
+            <div id="fields"></div>
+            <div class="form-actions"><button type="submit" class="primary" id="run"><i data-lucide="play"></i><span>Ejecutar Python</span></button><button type="button" class="text-button" id="reset" title="Restablecer ejemplo"><i data-lucide="rotate-ccw"></i>Restablecer</button></div>
+          </form>
+          <p class="error" id="error" role="alert" hidden></p>
+        </div>
+        <div class="output-section">
+          <h2><span class="section-number">02</span> Resultado <span class="micro-label" id="result-status">OUTPUT</span></h2>
+          <div id="result" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="execution" aria-labelledby="execution-title">
+        <div class="execution-heading"><div><div class="eyebrow">DENTRO DE PYTHON</div><h2 id="execution-title">La ejecuci&oacute;n, paso a paso</h2></div><span class="trace-badge" id="trace-count">Sin ejecuci&oacute;n</span></div>
+        <div class="trace-toolbar">
+          <div class="playback"><button class="icon-button" id="first" title="Volver al primer paso" aria-label="Volver al primer paso"><i data-lucide="skip-back"></i></button><button class="icon-button" id="prev" title="Paso anterior" aria-label="Paso anterior"><i data-lucide="chevron-left"></i></button><button class="icon-button play-button" id="play" title="Reproducir o pausar" aria-label="Reproducir pasos"><i data-lucide="play"></i></button><button class="icon-button" id="next" title="Paso siguiente" aria-label="Paso siguiente"><i data-lucide="chevron-right"></i></button></div>
+          <input type="range" id="timeline" min="0" max="0" value="0" aria-label="Paso de la ejecuci&oacute;n">
+          <span id="step-position" class="step-position">0 / 0</span>
+          <select id="speed" aria-label="Velocidad de reproducci&oacute;n"><option value="1200">Lento</option><option value="650" selected>Normal</option><option value="200">R&aacute;pido</option></select>
+        </div>
+        <div class="debugger">
+          <div class="code-panel"><div class="panel-header"><span><i data-lucide="file-code-2"></i><span id="source-name">ejercicio_01.py</span></span><span class="micro-label">C&Oacute;DIGO ORIGINAL</span></div><div id="source" class="source" tabindex="0" aria-label="C&oacute;digo fuente original"></div></div>
+          <div class="variables-panel"><div class="panel-header"><span><i data-lucide="box"></i>Variables en memoria</span><span id="function-name"></span></div><div id="step-explanation" class="step-explanation"></div><dl id="variables"></dl></div>
+        </div>
+        <div class="concept"><i data-lucide="lightbulb"></i><p id="concept"></p></div>
+      </section>
+      <footer class="main-footer"><span>PARCIAL 01 &nbsp;/&nbsp; PYTHON EN PR&Aacute;CTICA</span><span>Entrada &rarr; proceso &rarr; resultado</span></footer>
+    </main>
+  </div>
+</body>
+</html>

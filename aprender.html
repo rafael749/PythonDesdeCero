@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aprender desde cero | Python, paso a paso</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/laboratorio.css">
+  <link rel="stylesheet" href="/aprender.css">
+  <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script defer src="/aprender.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/aprender"><img src="/favicon.ico" alt="" width="30" height="32">Python<span> / desde cero</span></a>
+    <a class="lab-link" href="/"><i data-lucide="flask-conical"></i><span>Ver el parcial resuelto</span></a>
+  </header>
+  <div class="course-layout">
+    <aside class="course-sidebar">
+      <div class="course-label">TU RECORRIDO</div>
+      <div class="course-title">De cero al parcial</div>
+      <div class="progress-block"><span id="progress-label">0 / 36 completados</span><progress id="progress" max="36" value="0" aria-label="Progreso del curso"></progress></div>
+      <details class="route" open><summary>Ejercicios <i data-lucide="chevron-down"></i></summary><nav id="lessons" aria-label="Ruta de aprendizaje"></nav></details>
+      <p class="sidebar-note">Borradores y progreso en este navegador.</p>
+    </aside>
+    <main class="learning-main">
+      <div class="heading-row"><div><div class="eyebrow" id="lesson-group">PYTHON DESDE CERO</div><h1 id="lesson-title">Preparando tu recorrido</h1></div><span class="lesson-counter" id="lesson-counter"></span></div>
+      <div class="lesson-navigation"><button id="previous" class="text-button"><i data-lucide="arrow-left"></i>Anterior</button><span id="lesson-state">Por resolver</span><button id="following" class="text-button">Siguiente<i data-lucide="arrow-right"></i></button></div>
+      <p id="notice" class="notice" role="status" hidden></p>
+      <section class="lesson-content" aria-label="Concepto y desafio">
+        <div class="lesson-theory"><h2><span class="section-number">01</span> Un concepto nuevo</h2><div id="theory"></div><details class="example" open><summary>Ejemplo</summary><pre id="example"></pre></details></div>
+        <div class="lesson-task"><h2><span class="section-number">02</span> Tu desafio</h2><p id="task"></p><button class="text-button" id="hint"><i data-lucide="lightbulb"></i><span>Una pista</span></button><ol id="hints"></ol><span id="hint-count" class="hint-count"></span></div>
+      </section>
+      <section class="workspace" aria-label="Resolver el ejercicio">
+        <div class="editor-area">
+          <div class="editor-heading"><h2><i data-lucide="code-2"></i>Tu codigo</h2><span id="saved" role="status">Borrador local</span><button class="icon-button" id="restore" title="Restablecer codigo inicial" aria-label="Restablecer codigo inicial"><i data-lucide="rotate-ccw"></i></button></div>
+          <div id="file-tabs" class="file-tabs" role="tablist" aria-label="Archivos de practica"></div>
+          <div class="editor-shell"><div id="line-numbers" aria-hidden="true">1</div><textarea id="editor" aria-label="Codigo Python" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" wrap="off" placeholder="Escribi tu codigo Python"></textarea></div>
+          <div class="editor-meta"><span id="cursor">Linea 1</span><span>Python 3 &middot; 4 espacios</span></div>
+          <div class="practice-input"><label for="stdin">Entradas <span>Una respuesta por linea para input()</span></label><textarea id="stdin" rows="2" spellcheck="false" aria-label="Entradas para input"></textarea></div>
+          <div class="execution-actions"><button class="primary" id="execute"><i data-lucide="play"></i>Ejecutar</button><button class="validate-button" id="validate"><i data-lucide="check-check"></i>Validar solucion</button><button class="stop-button" id="stop" hidden><i data-lucide="square"></i>Detener</button></div>
+          <p id="runtime-status" role="status">Python en el navegador</p>
+        </div>
+        <div class="feedback-area" aria-live="polite" aria-busy="false">
+          <div class="feedback-heading"><h2><i data-lucide="messages-square"></i>Devolucion</h2><span id="feedback-badge">SIN INTENTOS</span></div>
+          <p id="feedback-summary">Tu solucion todavia no fue evaluada.</p>
+          <div id="error-detail" hidden></div>
+          <div id="checks"></div>
+          <details id="output-section" open><summary id="output-label">Salida de Python</summary><pre id="output">Sin ejecucion.</pre></details>
+          <details id="memory-section" hidden><summary>Variables al terminar</summary><dl id="memory"></dl></details>
+        </div>
+      </section>
+      <footer class="main-footer"><span>APRENDER &middot; PROBAR &middot; COMPRENDER</span><a href="/">Laboratorio del parcial</a></footer>
+    </main>
+  </div>
+</body>
+</html>
